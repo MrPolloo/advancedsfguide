@@ -40,6 +40,7 @@ if (isset($_POST['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Advanced Slimefun</title>
     <link rel="stylesheet" href="./style/main.css">
+    <link rel="icon" href="../assets/sf.png">
     <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./vendor/bootstrap/js/bootstrap.min.js">
 </head>
@@ -48,7 +49,7 @@ if (isset($_POST['login'])) {
     <!-- NAVBAR -->
     <div class="container-fluid bgdirt">
         <nav class="row navbar navbar-expand-lg navbar-light">
-            <a href="index.php" class="navbar-brand">
+            <a href="../index.php" class="navbar-brand">
                 <img src="./assets/logo.png" alt="" style="height: 50px;">
             </a>
 
@@ -59,11 +60,11 @@ if (isset($_POST['login'])) {
 
             <div class="collapse navbar-collapse" id="navb" style="z-index: 2;">
                 <ul class="navbar-nav ml-auto mr-3">
-                    <li class="nav-item mx-md-2"><a href="electricity.php" class="nav-link">
+                    <!-- <li class="nav-item mx-md-2"><a href="electricity.php" class="nav-link">
                             <span class="navtext">
                                 ELECTRICITY
                             </span>
-                        </a></li>
+                        </a></li> -->
                     <li class="nav-item mx-md-2"><a href="sfcalc.php" class="nav-link">
                             <span class="navtext">
                                 SFCALC

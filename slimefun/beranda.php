@@ -19,6 +19,7 @@ if (isset($_POST['logout'])) {
     <title>Home - Advanced Slimefun</title>
     <link rel="stylesheet" href="./style/main.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="icon" href="../assets/sf.png">
     <link rel="stylesheet" href="./vendor/bootstrap/js/bootstrap.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
@@ -28,12 +29,26 @@ if (isset($_POST['logout'])) {
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" />
 </head>
-
+<style>
+    .navbar-light .navbar-toggler {
+        border-color: white;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    .btn-primary {
+        background-color: #008542;
+    }
+    .btn-primary:hover {
+        background-color: #a0c5b3;
+    }
+    .modal-dialog {
+        width: 250px;
+    }
+</style>
 <body style="background-image: url('./assets/stone.jpg');">
     <!-- NAVBAR -->
     <div class="container-fluid bgdirt">
         <nav class="row navbar navbar-expand-lg navbar-light">
-            <a href="index.php" class="navbar-brand">
+            <a href="../beranda.php" class="navbar-brand">
                 <img src="./assets/logo.png" alt="" style="height: 50px;">
             </a>
 
@@ -45,12 +60,19 @@ if (isset($_POST['logout'])) {
             <div class="collapse navbar-collapse" id="navb" style="z-index: 2;">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mx-md-4">
+                        <a href="beranda.php" class="nav-link " style="margin-top: 5px;">
+                            <span class="navtext">
+                                HOME
+                            </span>
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item mx-md-4">
                         <a href="electricity.php" class="nav-link " style="margin-top: 5px;">
                             <span class="navtext">
                                 ELECTRICITY
                             </span>
                         </a>
-                    </li>
+                    </li> -->
                     <li class="nav-item mx-md-4">
                         <a href="sfcalc.php" class="nav-link" style="margin-top: 5px;">
                             <span class="navtext">
@@ -96,22 +118,19 @@ if (isset($_POST['logout'])) {
                     Tes Date
                 </div>
                 <div class="row updatenote ml-3">
-                    Update gan Update gan Update gan Update gan Update gan Update gan Update gan Update gan Update gan
-                    Update gan Update gan Update gan 1 tes tes
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pharetra ipsum in hendrerit tincidunt. Duis eleifend, tortor id malesuada ultrices.
                 </div>
                 <div class="row updatedate">
                     Tes Date
                 </div>
                 <div class="row updatenote ml-3">
-                    Update gan Update gan Update gan Update gan Update gan Update gan Update gan Update gan Update gan
-                    Update gan Update gan Update 2 gan tes tes
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pharetra ipsum in hendrerit tincidunt. Duis eleifend, tortor id malesuada ultrices.
                 </div>
                 <div class="row updatedate">
                     Tes Date
                 </div>
                 <div class="row updatenote ml-3">
-                    Update gan Update gan Update gan Update gan Update gan Update gan Update gan Update gan Update gan
-                    Update gan Update gan Update gan 3 tes tes
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pharetra ipsum in hendrerit tincidunt. Duis eleifend, tortor id malesuada ultrices.
                 </div>
             </div>
         </div>
@@ -125,9 +144,9 @@ if (isset($_POST['logout'])) {
             <div class="row">
                 <div class="col" style="padding: 20px;">
                     <div class="card-vote d-flex flex-column">
-                        <img class="card-image" src="./assets/sfcalc.jpg" alt="">
+                        <a href="sfcalc.php" style="text-decoration: none;"><img class="card-image" src="./assets/sfcalc.jpg" alt="">
                         <div class="card-body">
-                            <div class="featuretext">SF Calc</div>
+                            <div class="featuretext">SF Calc</div></a>
                             <div class="featuredis">
                                 Calculate your need for building a machine, and step to make it.
                             </div>
@@ -234,16 +253,16 @@ if (isset($_POST['logout'])) {
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <form action="" method="post">
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-body">Are you sure want to logout?</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <button class="btn btn-primary" name="logout">Logout</button>
+                        <button class="btn btn-primary signup" name="logout">Logout</button>
                     </div>
                 </form>
             </div>
