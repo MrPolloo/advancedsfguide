@@ -1,11 +1,20 @@
 @font-face {
     font-family: intro;
-    src: url(assets/fonts/Intro_0.otf);
+    src: url('../assets/fonts/Intro_0.otf');
 }
 
 @font-face {
     font-family: montserrat;
-    src: url(assets/fonts/Montserrat-Black.otf);
+    src: url('../assets/fonts/Montserrat-Black.otf');
+}
+
+@font-face {
+    font-family: genshin;
+    src: url('../assets/fonts/mihoyo.ttf');
+}
+@font-face {
+    font-family: rubik;
+    src: url('../assets/fonts/Rubik-Light.ttf');
 }
 
 .bgdirt {
@@ -58,7 +67,7 @@ input {
 }
 
 .sfcalctext {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: rubik;
     font-weight:bolder;
     font-size: 20px;
 }
@@ -95,18 +104,18 @@ input {
 .additional {
     color: #898181;
     font-size: 12px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: rubik;
     margin-top: 10px;
 }
 
 .updatedate {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: rubik;
     font-size: 20px;
     text-align: left;
 }
 
 .updatenote {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: rubik;
     font-size: 16px;
     text-align: left;
 }
@@ -133,12 +142,14 @@ img.img-carousel {
     margin-top: 10px;
     font-family: intro;
     color: rgba(4,134,68,255);
+    text-decoration: none;
 }
+
 
 .footer {
     color: white;
     font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: genshin;
     font-size: 15px;
     text-align: center;
     margin-top: 20px;
@@ -159,6 +170,7 @@ img.img-carousel {
     width: 70%;
     margin: auto;
     margin-top: 10px;
+    font-family: rubik;
 }
 
 .img-profile {
@@ -190,10 +202,130 @@ img.img-carousel {
 
 .resultitem {
     border: 5px solid rgb(85, 85, 85);
-    border-radius: 30px;
+    border-radius: 20px;
     background-color: white;
     padding: 10px;
-    width: 200px;
+    width: 100px;
+}
+
+#itemsimage {
+    width: 17%;
+}
+
+.submitcalc {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: intro;
+    background-color: #008542;
+    width: 120px;
+    padding: 7px 0;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    color: white;
+}
+
+.tutorialhead {
+    width: 320px;
+}
+
+.definisi {
+    width: 75%;
+    margin: auto;
+    margin-top: 2em;
+}
+.whatsfhavehead {
+    font-family: intro;
+    font-size: 25px;
+}
+.imagesfhave{
+    margin-top: 1em;
+    font-family: intro;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+.whatsfdo {
+    border: 5px solid rgb(221, 221, 221);
+    border-radius: 20px;
+    background-color: white;
+    padding: 10px;
+    width: 150px;
+}
+.nodec {
+    text-decoration: none;
+    color: black;
+}
+
+.tutorialbg {
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    border: 2px solid #72777e;
+    position: sticky;
+    z-index: 0;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+
+.tutorialdetailhead {
+    font-family: genshin;
+    font-size: 40px;
+    text-align: left;
+}
+
+.headimangetutorial {
+    padding: 15px;
+    margin: auto;
+    color: white;
+    background-color: #008542;
+    font-size: 20px;
+    font-family: intro;
+    border-radius: 15px 15px 0 0;   
+}
+
+.isitutorial {
+    font-family: rubik;
+    text-align: left;
+    width: 100%;
+}
+
+.headcontent {
+    border: solid 2px black;
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+    font-family: rubik;
+    width: 320px;
+}
+.isicontent {
+    border: solid 2px black;
+    border-radius: 0 0 5px 5px;
+    text-align: left;
+    padding: 10px;
+    font-family: rubik;
+    width: 320px;
+}
+
+.definitiontable {
+    border: solid 2px #98e4be;
+    background-color: #008542;
+    color: white;
+    font-family: intro;
+    padding: 5px;
+}
+
+.isidefinitiontable {
+    border: solid 2px #008542;
+    color: rgb(0, 0, 0);
+    font-family: intro;
+    padding: 5px;
+}
+
+.imgicon {
+    width: 50%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -209,9 +341,6 @@ img.img-carousel {
     
 }
 
-#itemsimage {
-    width: 17%;
-}
 
 @media only screen and (max-width: 999px) {
     .wrap-img-carousel {
@@ -227,10 +356,53 @@ img.img-carousel {
     .inputitems {
         width: 150px;
     }
+    #itemsimage {
+        width: 100px;
+    }
+    .categoryitems{
+        width: 80%;
+    }
+    .sfcalcbox {
+        margin-top: 50px;
+    }
+    .definisi {
+        width: 90%;
+        margin: auto;
+        margin-top: 1em;
+        font-size: 15px;
+    }
+    .whatsfdo {
+        width: 100px;
+    }
+    .imagesfhave {
+        font-size: 10px;
+    }
+    .headimangetutorial {
+        width: 50%;
+    }
+    .isitutorial {
+        width: 100%;
+    }
+    .imgicon {
+        width: 100%;
+    }
+    .definitiontable {
+        font-size: 0.7em;
+    }
+    .isidefinitiontable {
+        font-size: 0.7em;
+    }
 }
 
 @media only screen and (max-width: 599px) {
     .wrap-img-carousel {
         height: 60vw;
     }
+    .tutorialhead {
+        width: 80%;
+    }
+    .whatsfhavehead {
+        font-size: 1.2em;
+    }
+    
 }
